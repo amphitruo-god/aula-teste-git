@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+    int opcao;
+    float numero1, numero2, resultado;
+    
+    do {
+        printf("Escolha uma operação \n");
+        printf(" 1 - Soma \n");
+        printf(" 2 - Subtração \n");
+        printf(" 3 - Multiplicação \n");
+        printf(" 4 - Divisão \n");
+        printf(" 5 - Saída \n");
+        scanf("%i", &opcao);
+        
+        if (opcao >= 1 && opcao <= 4){
+            printf("Digite o primeiro numero: ");
+            scanf("%f", &numero1);
+            printf("Digite o segundo numero: ");
+            scanf("%f", &numero2);
+        }
+        
+        if (opcao == 1){
+            resultado = numero1 + numero2;
+            printf("A Soma de %.2f + %.2f = %.2f \n", numero1, numero2, resultado);
+        } else if(opcao == 2){
+            resultado = numero1 - numero2;
+            printf("A Subtração de %.2f - %.2f = %.2f \n", numero1, numero2, resultado); 
+        } else if(opcao == 3){
+            resultado = numero1 * numero2;
+            printf("A Multiplicação de %.2f * %.2f = %.2f \n", numero1, numero2, resultado);
+        } else if(opcao == 4){
+            if (numero2 != 0){
+                resultado = numero1 / numero2;
+            printf("A Divisão de %.2f / %.2f = %.2f \n", numero1, numero2, resultado);
+            } else {
+                printf("ERRO, Divisão POR ZERO!");
+            }
+        } else if (opcao == 5){
+            printf("Saindo...");
+        } else {
+            printf("opcão inválida!");
+        }
+        
+    } while (opcao != 5);
+        
+        
+      
+    return 0;
+    
+}
