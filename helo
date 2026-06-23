@@ -1,0 +1,24 @@
+#include <stdio.h> // importar biblioteca 
+#include <math.h>
+// um algotirimo para calcular a ciculo area raio
+
+int main() {
+    // iniciar as varaiveis
+    
+    float raio, area;
+    
+    // solicitar os valoreas pro usuario
+    
+    printf("digite o valor do raio do circulo: ");
+    scanf("%f", &raio);
+    
+  
+    // executar as operações
+    
+   area = M_PI * pow(raio, 2);
+    
+    // exibir om resultado pro usuario
+    
+    printf("A área do círculo é: %.2f", area);
+    return 0;
+}
